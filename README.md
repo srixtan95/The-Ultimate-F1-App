@@ -30,7 +30,7 @@ f1predictor/
 2. Clone the project and open the folder:
 
    ```bash
-   git clone https://github.com/YOUR-USERNAME/f1predictor.git
+   git clone https://github.com/srixtan95/f1predictor.git
    cd f1predictor
    ```
 
