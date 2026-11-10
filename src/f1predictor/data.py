@@ -52,3 +52,23 @@ def get_season_results(year, pause=0.5):
     if not tables:
         return pd.DataFrame()
     return pd.concat(tables, ignore_index=True)
+
+def get_schedule(year):
+    """Return the race calendar of one season as a DataFrame."""
+    url = f"{BASE_URL}/{year}.json"
+    response = requests.get(url, timeout=30)
+    response.raise_for_status()
+
+    races = response.json()["MRData"]["RaceTable"]["Races"]
+
+    rows = []
+    for race in races:
+        rows.append({
+            "round": int(race["round"]),
+            "name": race["raceName"],
+            "circuit": race["Circuit"]["circuitName"],
+            "country": race["Circuit"]["Location"]["country"],
+            "date": race["date"],
+        })
+
+    return pd.DataFrame(rows)
