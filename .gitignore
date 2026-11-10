@@ -1,0 +1,13 @@
+# Virtual environment
+.venv/
+
+# Secrets
+.env
+
+# Downloaded cache
+data/cache/
+
+# Python and Jupyter junk
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
