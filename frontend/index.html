@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>F1 Predictor</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h1>F1 Calendar</h1>
+
+    <div class="controls">
+      <label for="year">Season</label>
+      <input type="number" id="year" value="2024" min="1950" max="2100">
+      <button id="load">Load</button>
+    </div>
+
+    <p id="status"></p>
+    <ul id="races"></ul>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

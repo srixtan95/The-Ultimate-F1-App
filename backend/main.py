@@ -1,30 +1,21 @@
-from fastapi import FastAPI
-
-app = FastAPI(title="F1 Predictor API")
-
-
-@app.get("/")
-def home():
-    return {"message": "F1 predictor backend is running"}
-
-@app.get("/hello/{name}")
-def hello(name: str):
-    return {"message": f"Hello, {name}!"}
-
+from pathlib import Path
 
 from fastapi import FastAPI, HTTPException
+from fastapi.staticfiles import StaticFiles
 
 from f1predictor.data import get_schedule
 
 app = FastAPI(title="F1 Predictor API")
 
+FRONTEND_DIR = Path(__file__).resolve().parent.parent / "frontend"
 
-@app.get("/")
-def home():
+
+@app.get("/api/health")
+def health():
     return {"message": "F1 predictor backend is running"}
 
 
-@app.get("/schedule/{year}")
+@app.get("/api/schedule/{year}")
 def schedule(year: int):
     if year < 1950 or year > 2100:
         raise HTTPException(status_code=400, detail="Year must be between 1950 and 2100")
@@ -34,3 +25,7 @@ def schedule(year: int):
         raise HTTPException(status_code=404, detail=f"No races found for {year}")
 
     return table.to_dict(orient="records")
+
+
+# This line must stay LAST. It serves the files in the frontend folder.
+app.mount("/", StaticFiles(directory=FRONTEND_DIR, html=True), name="frontend")
