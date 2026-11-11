@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calendar | F1 Predictor</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a class="brand" href="/">F1 Predictor</a>
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/calendar.html">Calendar</a>
+        <a href="/contact.html">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <h1>F1 Calendar</h1>
+
+    <div class="controls">
+      <label for="year">Season</label>
+      <input type="number" id="year" value="2024" min="1950" max="2100">
+      <button id="load">Load</button>
+    </div>
+
+    <p id="status"></p>
+    <ul id="races"></ul>
+  </main>
+
+  <footer class="site-footer">
+    A learning project. Not affiliated with Formula 1. Predictions are not betting advice.
+  </footer>
+
+  <script src="calendar.js"></script>
+</body>
+</html>

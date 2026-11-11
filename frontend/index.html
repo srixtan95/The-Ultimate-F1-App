@@ -7,19 +7,62 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <header class="site-header">
+    <nav class="nav">
+      <a class="brand" href="/">F1 Predictor</a>
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/calendar.html">Calendar</a>
+        <a href="/contact.html">Contact</a>
+      </div>
+    </nav>
+  </header>
+
   <main>
-    <h1>F1 Calendar</h1>
+    <section class="hero">
+      <h1>Predict. Replay. <span class="accent">Explore.</span></h1>
+      <p>
+        An open-source Formula 1 project built with Python and machine learning.
+        Race predictions, track replays, standings and driver profiles, built step by step.
+      </p>
+      <a class="button-link" href="/calendar.html">See the calendar</a>
+    </section>
 
-    <div class="controls">
-      <label for="year">Season</label>
-      <input type="number" id="year" value="2024" min="1950" max="2100">
-      <button id="load">Load</button>
-    </div>
+    <section class="cards">
+      <article class="card">
+        <span class="badge live">Available</span>
+        <h3>Race calendar</h3>
+        <p>Every race of every season since 1950.</p>
+      </article>
 
-    <p id="status"></p>
-    <ul id="races"></ul>
+      <article class="card">
+        <span class="badge">Coming soon</span>
+        <h3>Race predictions</h3>
+        <p>Podium chances for the next race.</p>
+      </article>
+
+      <article class="card">
+        <span class="badge">Coming soon</span>
+        <h3>Track replay</h3>
+        <p>Watch the cars move around the circuit.</p>
+      </article>
+
+      <article class="card">
+        <span class="badge">Coming soon</span>
+        <h3>Standings</h3>
+        <p>Driver and team championship tables.</p>
+      </article>
+
+      <article class="card">
+        <span class="badge">Coming soon</span>
+        <h3>Driver profiles</h3>
+        <p>Results and career numbers for each driver.</p>
+      </article>
+    </section>
   </main>
 
-  <script src="app.js"></script>
+  <footer class="site-footer">
+    A learning project. Not affiliated with Formula 1. Predictions are not betting advice.
+  </footer>
 </body>
 </html>

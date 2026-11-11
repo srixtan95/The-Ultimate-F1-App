@@ -1,3 +1,176 @@
+:root {
+  --bg: #15151e;
+  --surface: #1f1f2b;
+  --text: #ffffff;
+  --muted: #a0a0b0;
+  --accent: #e10600;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* Header and navigation */
+.site-header {
+  background: var(--surface);
+  border-bottom: 2px solid var(--accent);
+}
+
+.nav {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 14px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand {
+  color: var(--text);
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  color: var(--text);
+}
+
+/* Layout */
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.site-footer {
+  max-width: 900px;
+  margin: 32px auto 0;
+  padding: 24px;
+  border-top: 1px solid #2b2b3a;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* Home page */
+.hero {
+  padding: 48px 0 24px;
+}
+
+.hero h1 {
+  font-size: 40px;
+  margin: 0 0 12px;
+}
+
+.hero p {
+  max-width: 560px;
+  color: var(--muted);
+  font-size: 18px;
+}
+
+.accent {
+  color: var(--accent);
+}
+
+.button-link {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 10px 18px;
+  border-radius: 6px;
+  background: var(--accent);
+  color: var(--text);
+  text-decoration: none;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.card {
+  background: var(--surface);
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.card h3 {
+  margin: 0 0 8px;
+}
+
+.card p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.badge {
+  display: inline-block;
+  margin-bottom: 8px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: #2b2b3a;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.badge.live {
+  background: var(--accent);
+  color: var(--text);
+}
+
+/* Calendar page */
+.controls {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+input,
+button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+button {
+  background: var(--accent);
+  color: var(--text);
+  cursor: pointer;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  margin-bottom: 8px;
+  padding: 12px;
+  border-radius: 6px;
+  background: var(--surface);
+}
+
+/* Contact page */
+.link-list a {
+  color: var(--text);
+}
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
